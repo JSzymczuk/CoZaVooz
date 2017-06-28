@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context="czv.cozavooz.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/cameraView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/cameraFragment"
+            android:name="czv.cozavooz.fragments.CameraFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_camera"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <fragment
+            android:id="@+id/takePictureFragment"
+            android:name="czv.cozavooz.fragments.TakePictureFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_take_picture"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom|center_horizontal" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/snapshotView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <fragment
+            android:id="@+id/snapshotFragment"
+            android:name="czv.cozavooz.fragments.SnapshotFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_snapshot"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <FrameLayout
+            android:layout_width="280dp"
+            android:layout_height="150dp"
+            android:background="#666"
+            android:gravity="bottom"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="40dp"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="345dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Zażółcić gęślą jaźń, mordeczko?"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="20dp" />
+
+            <fragment
+                android:id="@+id/fragment"
+                android:name="czv.cozavooz.fragments.YesNoSelectionFragment"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="10dp"
+                tools:layout="@layout/fragment_yes_no" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
