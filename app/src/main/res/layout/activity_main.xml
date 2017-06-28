@@ -43,8 +43,8 @@
 
     <FrameLayout
         android:id="@+id/snapshotView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:visibility="gone"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
@@ -84,7 +84,7 @@
                 android:textSize="20dp" />
 
             <fragment
-                android:id="@+id/fragment"
+                android:id="@+id/fragmentYesNo"
                 android:name="czv.cozavooz.fragments.YesNoSelectionFragment"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
